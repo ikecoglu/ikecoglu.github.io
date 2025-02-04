@@ -1,0 +1,624 @@
+[
+	{
+		"id": "http://zotero.org/users/8894352/items/4VC8EKFY",
+		"type": "article-journal",
+		"container-title": "Physical Review E",
+		"DOI": "10.1103/PhysRevE.102.032134",
+		"ISSN": "2470-0045, 2470-0053",
+		"issue": "3",
+		"journalAbbreviation": "Phys. Rev. E",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "1 citations (Crossref) [2024-07-23]",
+		"page": "032134",
+		"source": "DOI.org (Crossref)",
+		"title": "Across dimensions: Two- and three-dimensional phase transitions from the iterative renormalization-group theory of chains",
+		"title-short": "Across dimensions",
+		"URL": "https://link.aps.org/doi/10.1103/PhysRevE.102.032134",
+		"volume": "102",
+		"author": [
+			{
+				"family": "Keçoğlu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Berker",
+				"given": "A. Nihat"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					9,
+					13
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					9,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/UUZHBKIT",
+		"type": "article-journal",
+		"abstract": "The global phase diagrams of the Ashkin–Teller model are calculated in d=2 and 3 by renormalization-group theory that is exact on the hierarchical lattice and approximate on the recently improved Migdal–Kadanoff procedure. Three different ordered phases occur in the dimensionally distinct phase diagrams that reflect three-fold order-parameter permutation symmetry, a closed symmetry line, and a quasi-disorder line. First- and second-order phase boundaries are obtained. In d=2, second-order phase transitions meeting at a bifurcation point are seen. In d=3, first- and second-order phase transitions are separated by tricritical and critical endpoints.",
+		"container-title": "Physica A: Statistical Mechanics and its Applications",
+		"DOI": "10.1016/j.physa.2023.129248",
+		"ISSN": "0378-4371",
+		"journalAbbreviation": "Physica A: Statistical Mechanics and its Applications",
+		"license": "All rights reserved",
+		"note": "0 citations (Crossref) [2024-07-23]",
+		"page": "129248",
+		"source": "ScienceDirect",
+		"title": "Global Ashkin–Teller phase diagrams in two and three dimensions: Multicritical bifurcation versus double tricriticality—endpoint",
+		"title-short": "Global Ashkin–Teller phase diagrams in two and three dimensions",
+		"URL": "https://www.sciencedirect.com/science/article/pii/S0378437123008038",
+		"volume": "630",
+		"author": [
+			{
+				"family": "Keçoğlu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Berker",
+				"given": "A. Nihat"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					10,
+					11
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					11,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/AAKBQL8D",
+		"type": "article-journal",
+		"container-title": "Journal of Raman Spectroscopy",
+		"DOI": "10.1002/jrs.6379",
+		"ISSN": "0377-0486, 1097-4555",
+		"issue": "8",
+		"journalAbbreviation": "J Raman Spectroscopy",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "5 citations (Crossref) [2024-07-23]",
+		"page": "1445-1452",
+		"source": "DOI.org (Crossref)",
+		"title": "Denoising Raman spectra using fully convolutional encoder–decoder network",
+		"URL": "https://onlinelibrary.wiley.com/doi/10.1002/jrs.6379",
+		"volume": "53",
+		"author": [
+			{
+				"family": "Loc",
+				"given": "Irem"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					9,
+					13
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/TCWYSURG",
+		"type": "article-journal",
+		"abstract": "Abstract\n            The salinity level of the growing medium has diverse effects on the development of plants, including both physical and biochemical changes. To determine the salt stress level of a plant endures, one can measure these structural and chemical changes. Raman spectroscopy and biochemical analysis are some of the most common techniques in the literature. Here, we present a combination of machine learning and Raman spectroscopy with which we can both find out the biochemical change that occurs while the medium salt concentration changes and predict the level of salt stress a wheat sample experiences accurately using our trained regression models. In addition, by applying different machine learning algorithms, we compare the level of success for different algorithms and determine the best method to use in this application. Production units can take actions based on the quantitative information they get from the trained machine learning models related to salt stress, which can potentially increase efficiency and avoid the loss of crops.",
+		"container-title": "Scientific Reports",
+		"DOI": "10.1038/s41598-022-10767-y",
+		"ISSN": "2045-2322",
+		"issue": "1",
+		"journalAbbreviation": "Sci Rep",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "5 citations (Crossref) [2024-07-23]",
+		"page": "7197",
+		"source": "DOI.org (Crossref)",
+		"title": "Quantification of salt stress in wheat leaves by Raman spectroscopy and machine learning",
+		"URL": "https://www.nature.com/articles/s41598-022-10767-y",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Sirkeci",
+				"given": "Merve"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Sen",
+				"given": "Ayse"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Guzelcimen",
+				"given": "Feyza"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					9,
+					13
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/M7JKRQS4",
+		"type": "article-journal",
+		"abstract": "Abstract\n            Atrial fibrillation (AF) is diagnosed with the electrocardiogram, which is the gold standard in clinics. However, sufficient arrhythmia monitoring takes a long time, and many of the tests are made in only a few seconds, which can lead arrhythmia to be missed. Here, we propose a combined method to detect the effects of AF on atrial tissue. We characterize tissues obtained from patients with or without AF by scanning acoustic microscopy (SAM) and by Raman spectroscopy (RS) to construct a mechano-chemical profile. We classify the Raman spectral measurements of the tissue samples with an unsupervised clustering method, k-means and compare their chemical properties. Besides, we utilize scanning acoustic microscopy to compare and determine differences in acoustic impedance maps of the groups. We compared the clinical outcomes with our findings using a neural network classification for Raman measurements and ANOVA for SAM measurements. Consequently, we show that the stiffness profiles of the tissues, corresponding to the patients with chronic AF, without AF or who experienced postoperative AF, are in agreement with the lipid-collagen profiles obtained by the Raman spectral characterization.",
+		"container-title": "Scientific Reports",
+		"DOI": "10.1038/s41598-022-10380-z",
+		"ISSN": "2045-2322",
+		"issue": "1",
+		"journalAbbreviation": "Sci Rep",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "1 citations (Crossref) [2024-07-23]",
+		"page": "6461",
+		"source": "DOI.org (Crossref)",
+		"title": "Atrial fibrillation designation with micro-Raman spectroscopy and scanning acoustic microscope",
+		"URL": "https://www.nature.com/articles/s41598-022-10380-z",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Seyma"
+			},
+			{
+				"family": "Sen",
+				"given": "Kubra"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Ulukan",
+				"given": "Mustafa Ozer"
+			},
+			{
+				"family": "Karakaya",
+				"given": "Atalay"
+			},
+			{
+				"family": "Erkanli",
+				"given": "Korhan"
+			},
+			{
+				"family": "Turkoglu",
+				"given": "Halil"
+			},
+			{
+				"family": "Ugurlucan",
+				"given": "Murat"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Tanoren",
+				"given": "Bukem"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					9,
+					13
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/5ULWDCWY",
+		"type": "article-journal",
+		"abstract": "(a) Acoustic impedance map of an aorta sample by SAM. (b) Correlation between SAM and RS measurements. As age increases, signals obtained by both techniques increase with similar trends.\n          , \n            \n              Aortic aneurysm is observed as a result of the extensive alteration in the elasticity of the aortic wall due to the breakdown of elastin and collagen. In this study, we studied the feasibility of scanning acoustic microscopy (SAM) and Raman spectroscopy (RS) in characterizing the dilated segments of the aorta from male and female patients with aortic aneurysm. SAM determined the acoustic property variation in the aorta by calculating the acoustic impedance values of aorta samples of 18 patients. RS determined the disease states by analyzing the chemical variation especially in the peaks related to elastin and collagen using the\n              k\n              -means classification method. Consequently, we assume that combining these two techniques in clinics will help to investigate the dilated segment of the aorta with micrometer resolution, which will reduce the possibility of new aneurysm formation due to a segment not excised during the surgery.",
+		"container-title": "Analytical Methods",
+		"DOI": "10.1039/D1AY01133B",
+		"ISSN": "1759-9660, 1759-9679",
+		"issue": "39",
+		"journalAbbreviation": "Anal. Methods",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "3 citations (Crossref) [2024-07-23]",
+		"page": "4683-4690",
+		"source": "DOI.org (Crossref)",
+		"title": "Aortic aneurysm evaluation by scanning acoustic microscopy and Raman spectroscopy",
+		"URL": "http://xlink.rsc.org/?DOI=D1AY01133B",
+		"volume": "13",
+		"author": [
+			{
+				"family": "Tanoren",
+				"given": "Bukem"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Parlak",
+				"given": "Melita"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Oztas",
+				"given": "Didem Melis"
+			},
+			{
+				"family": "Ulukan",
+				"given": "Mustafa Ozer"
+			},
+			{
+				"family": "Erkanli",
+				"given": "Korhan"
+			},
+			{
+				"family": "Ugurlucan",
+				"given": "Murat"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					9,
+					13
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/YQFP6BP9",
+		"type": "article-journal",
+		"abstract": "A complexity classification scheme is developed from the fractal spectra of spin-glass chaos and demonstrated with multigeographic multicultural music and brain electroencephalogram signals. Systematic patterns are found to emerge. Chaos under scale change is the essence of spin-glass ordering and can be obtained, continuously tailor-made, from the exact renormalization-group solution of Ising models on frustrated hierarchical lattices. The music pieces are from genres of Turkish music, namely Arabesque, Rap, Pop, Classical, and genres of Western music, namely Blues, Jazz, Pop, Classical. A surprising group defection occurs.",
+		"container-title": "Chaos, Solitons & Fractals",
+		"DOI": "10.1016/j.chaos.2022.113005",
+		"ISSN": "0960-0779",
+		"journalAbbreviation": "Chaos, Solitons & Fractals",
+		"language": "en",
+		"license": "All rights reserved",
+		"note": "9 citations (Crossref) [2024-07-23]",
+		"page": "113005",
+		"source": "ScienceDirect",
+		"title": "Multifractal spin-glass chaos projection and interrelation of multicultural music and brain signals",
+		"URL": "https://www.sciencedirect.com/science/article/pii/S0960077922011845",
+		"volume": "167",
+		"author": [
+			{
+				"family": "Artun",
+				"given": "E. Can"
+			},
+			{
+				"family": "Keçoğlu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Türkoğlu",
+				"given": "Alpar"
+			},
+			{
+				"family": "Berker",
+				"given": "A. Nihat"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					12,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					2,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/8373QYAR",
+		"type": "article-journal",
+		"abstract": "In histopathology, it is highly crucial to have chemical and structural information about tissues. Additionally, the segmentation of zones within a tissue plays a vital role in investigating the functions of these regions for better diagnosis and treatment. The placenta plays a vital role in embryonic and fetal development and in diagnosing some diseases associated with its dysfunction. This study provides a label-free approach to obtain the images of mature mouse placenta together with the chemical differences between the tissue compartments using Raman spectroscopy. To generate the Raman images, spectra of placental tissue were collected using a custom-built optical setup. The pre-processed spectra were analyzed using statistical and machine learning methods to acquire the Raman maps. We found that the placental regions called decidua and the labyrinth zone are biochemically distinct from the junctional zone. A histologist performed a comparison and evaluation of the Raman map with histological images of the placental tissue, and they were found to agree. The results of this study show that Raman spectroscopy offers the possibility of label-free monitoring of the placental tissue from mature mice while simultaneously revealing crucial structural information about the zones.",
+		"container-title": "Biomedical Optics Express",
+		"DOI": "10.1364/BOE.521500",
+		"ISSN": "2156-7085",
+		"issue": "5",
+		"journalAbbreviation": "Biomed. Opt. Express, BOE",
+		"language": "EN",
+		"license": "&#169; 2024 Optica Publishing Group",
+		"note": "0 citations (Crossref) [2024-07-23]\npublisher: Optica Publishing Group",
+		"page": "3441-3456",
+		"source": "opg.optica.org",
+		"title": "Label-free differentiation of functional zones in mature mouse placenta using micro-Raman imaging",
+		"URL": "https://opg.optica.org/boe/abstract.cfm?uri=boe-15-5-3441",
+		"volume": "15",
+		"author": [
+			{
+				"family": "Inanc",
+				"given": "Arda"
+			},
+			{
+				"family": "Bektas",
+				"given": "Nayce Ilayda"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Durkut",
+				"given": "Begum"
+			},
+			{
+				"family": "Ucak",
+				"given": "Melike"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Celik-Ozenci",
+				"given": "Ciler"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					5,
+					9
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					5,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/YFLM7RK8",
+		"type": "article-journal",
+		"abstract": "This research aimed to assess the feasibility of utilizing Raman spectroscopy in plant breeding programs. For this purpose, the evaluation of the mutant populations set up the application of 4 mM NaN3 to the somatic embryos obtained from mature wheat (Triticum aestivum L. Adana-99 cv.) embryos. Advanced wheat mutant lines, which were brought up to the seventh generation with salt stress tolerance by following in vitro and in vivo environments constructed by mutated populations, were evaluated using conventional techniques [measurement of antioxidant enzyme activities (SOD, CAT, and POX), total chlorophyll, TBARS, and proline contents; measurement of the concentration of Na+ and K+ ions; and evaluation of gene expression by qPCR (TaHKT2;1, TaHKT1;5, TaSOS1, TaNa+/H+ vacuolar antiporter, TaV-PPase, TaV-ATPase, and TaP5CS)] and Raman spectroscopy. In this research, no significant difference was found in the increase of SOD, CAT, and POX antioxidant enzyme activities between the salt-treated and untreated experimental groups of the commercial cultivar, while there was a statistically significant increase in salt-treated advanced generation mutant lines as compared to control and the salt-treated commercial cultivar. Proline showed a statistically significant increase in all experimental groups compared to the untreated commercial cultivar. The degradation in the amount of chlorophyll was lower in the salt-treated advanced generation mutant lines than in the salt-treated commercial cultivar. According to gene expression studies, there were statistical differences at various levels in terms of Na+ and/or K+ uptake from soil to plant (TaHKT2;1, TaHKT1;5, and TaSOS1), and Na+ compartmentalizes into the cell vacuole (TaNa+/H+ vacuolar antiporter, Ta vacuolar pyrophosphatase, and Ta vacuolar H+-ATPase). The expression activity of TaP5CS, which is responsible for the transcription of proline, is similar to the content of proline in the current study. As a result of Raman spectroscopy, the differences in peaks represent the protein-related bands in mutant lines having a general decreasing trend in intensity when compared to the commercial cultivar. Amide-I (1,630 and 1,668 cm−1), Histidine, Lysine, Arginine, and Leucine bands (823, 849, 1,241, 1,443, and 1,582 cm−1) showed decreasing wavenumbers. Beta-carotene peaks at 1,153 and 1,519 cm−1 showed increasing trends when the normalized Raman intensities of the mutant lines were compared.",
+		"container-title": "Frontiers in Plant Science",
+		"ISSN": "1664-462X",
+		"license": "All rights reserved",
+		"source": "Frontiers",
+		"title": "Differentiation of advanced generation mutant wheat lines: Conventional techniques versus Raman spectroscopy",
+		"title-short": "Differentiation of advanced generation mutant wheat lines",
+		"URL": "https://www.frontiersin.org/articles/10.3389/fpls.2023.1116876",
+		"volume": "14",
+		"author": [
+			{
+				"family": "SEN",
+				"given": "Ayse"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Ahmed",
+				"given": "Muhammad"
+			},
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					9,
+					26
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/8894352/items/BR9QYACW",
+		"type": "article-journal",
+		"abstract": "Exosomes, nano-sized extracellular vesicles (EVs) secreted from cells, carry various cargo molecules reflecting their cells of origin. As EV content, structure, and size are highly heterogeneous, their classification via cargo molecules by determining their origin is challenging. Here, a method is presented combining surface-enhanced Raman spectroscopy (SERS) with machine learning algorithms to employ the classification of EVs derived from five different cell lines to reveal their cellular origins. Using an artificial neural network algorithm, it is shown that the label-free Raman spectroscopy method's prediction ratio correlates with the ratio of HT-1080 exosomes in the mixture. This machine learning-assisted SERS method enables a new direction through label-free investigation of EV preparations by differentiating cancer cell-derived exosomes from those of healthy. This approach will potentially open up new avenues of research for early detection and monitoring of various diseases, including cancer.",
+		"container-title": "Small",
+		"DOI": "10.1002/smll.202205519",
+		"ISSN": "1613-6829",
+		"issue": "9",
+		"language": "en",
+		"license": "© 2023 Wiley-VCH GmbH",
+		"note": "28 citations (Crossref) [2024-07-23]\n_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/smll.202205519",
+		"page": "2205519",
+		"source": "Wiley Online Library",
+		"title": "Label-Free Identification of Exosomes using Raman Spectroscopy and Machine Learning",
+		"URL": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202205519",
+		"volume": "19",
+		"author": [
+			{
+				"family": "Parlatan",
+				"given": "Ugur"
+			},
+			{
+				"family": "Ozen",
+				"given": "Mehmet Ozgun"
+			},
+			{
+				"family": "Kecoglu",
+				"given": "Ibrahim"
+			},
+			{
+				"family": "Koyuncu",
+				"given": "Batuhan"
+			},
+			{
+				"family": "Torun",
+				"given": "Hulya"
+			},
+			{
+				"family": "Khalafkhany",
+				"given": "Davod"
+			},
+			{
+				"family": "Loc",
+				"given": "Irem"
+			},
+			{
+				"family": "Ogut",
+				"given": "Mehmet Giray"
+			},
+			{
+				"family": "Inci",
+				"given": "Fatih"
+			},
+			{
+				"family": "Akin",
+				"given": "Demir"
+			},
+			{
+				"family": "Solaroglu",
+				"given": "Ihsan"
+			},
+			{
+				"family": "Ozoren",
+				"given": "Nesrin"
+			},
+			{
+				"family": "Unlu",
+				"given": "Mehmet Burcin"
+			},
+			{
+				"family": "Demirci",
+				"given": "Utkan"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					10,
+					12
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	}
+]

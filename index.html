@@ -75,6 +75,31 @@
       padding: 30px 0;
       margin-top: 40px;
     }
+    
+    .publication-item {
+      padding: 1.5rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .publication-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .publication-title {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    
+    .authors {
+      font-size: 0.95rem;
+    }
+    
+    .venue {
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -192,6 +217,65 @@
   <!-- jQuery and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <script>
+    async function loadPublications() {
+      try {
+        const response = await fetch('publications.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const publications = await response.json();
+        
+        // Sort entries by year (newest first)
+        publications.sort((a, b) => {
+          // Handle both year formats
+          const yearA = a.issued?.['date-parts']?.[0]?.[0] || a.year;
+          const yearB = b.issued?.['date-parts']?.[0]?.[0] || b.year;
+          return yearB - yearA;
+        });
+
+        const publicationsList = document.getElementById('publications-list');
+        if (!publications || publications.length === 0) {
+          publicationsList.innerHTML = '<p>No publications found.</p>';
+          return;
+        }
+
+        const publicationsHTML = publications.map(pub => {
+          const title = pub.title;
+          // Handle different author formats
+          const authors = Array.isArray(pub.author) 
+            ? pub.author.map(author => `${author.given || ''} ${author.family || ''}`).join(', ')
+            : pub.author;
+          const journal = pub['container-title'] || pub.journal;
+          const year = pub.issued?.['date-parts']?.[0]?.[0] || pub.year;
+          const doi = pub.DOI || pub.doi;
+          
+          return `
+            <div class="publication-item mb-4 p-4">
+              <h5 class="publication-title">${title}</h5>
+              <p class="authors text-muted mb-1">${authors}</p>
+              <p class="venue mb-2"><em>${journal}</em>, ${year}</p>
+              ${doi ? `<a href="https://doi.org/${doi}" target="_blank" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-external-link-alt mr-1"></i>View Publication
+              </a>` : ''}
+            </div>
+          `;
+        });
+        
+        publicationsList.innerHTML = publicationsHTML.join('');
+      } catch (error) {
+        console.error('Error loading publications:', error);
+        document.getElementById('publications-list').innerHTML = 
+          `<p class="text-danger">Error loading publications: ${error.message}</p>`;
+      }
+    }
+
+    // Load publications when the page loads
+    document.addEventListener('DOMContentLoaded', loadPublications);
+  </script>
   <!-- Add Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Add Google Font -->
