@@ -137,6 +137,15 @@
     .banner .lead {
       color: rgba(255, 255, 255, 0.9);  /* Slightly transparent white */
     }
+
+    /* Add this to your existing CSS */
+    #about img {
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      border: 5px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -181,9 +190,12 @@
     
     <!-- About Section -->
     <section id="about">
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <h1 class="text-center mb-4">About Me</h1>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="Portrait.png" alt="Ibrahim Kecoglu" class="img-fluid rounded-circle shadow">
+        </div>
+        <div class="col-md-6">
+          <h1 class="mb-4">About Me</h1>
           <div class="about-content">
             <p class="lead">Welcome! I am a Ph.D. student in Biomedical Physics at Stanford University, exploring the intersection of physics, mathematics, and biomedicine. My work spans theoretical modeling, experimental research, and machine learning applications. I am passionate about uncovering new insights that transform our understanding of biological systems and develop technologies that improve human health.</p>
           </div>
