@@ -275,6 +275,7 @@
   <!-- jQuery and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="sortPublications.js"></script>
   <!-- Add Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   
@@ -287,22 +288,7 @@
         }
         let publications = await response.json();
         
-        // Sort entries by year (newest first) in a deterministic, stable way.
-        const getSortYear = (pub) => {
-          const rawYear = pub.issued?.['date-parts']?.[0]?.[0] ?? pub.year;
-          const numericYear = Number(rawYear);
-          return Number.isFinite(numericYear) ? numericYear : Number.NEGATIVE_INFINITY;
-        };
-
-        publications = publications
-          .map((pub, index) => ({ pub, index, sortYear: getSortYear(pub) }))
-          .sort((a, b) => {
-            if (b.sortYear !== a.sortYear) {
-              return b.sortYear - a.sortYear;
-            }
-            return a.index - b.index;
-          })
-          .map((entry) => entry.pub);
+        publications = sortPublications(publications);
 
         const publicationsList = document.getElementById('publications-list');
         if (!publications || publications.length === 0) {
