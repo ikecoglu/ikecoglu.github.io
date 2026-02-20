@@ -98,6 +98,34 @@ async function loadPublications() {
 }
 
 function updateFreshnessCues() {
+  function getDocumentLastModifiedDate() {
+    const raw = typeof document.lastModified === 'string' ? document.lastModified.trim() : '';
+    if (!raw) {
+      return null;
+    }
+
+    const parsedTimestamp = Date.parse(raw);
+    if (!Number.isNaN(parsedTimestamp)) {
+      return new Date(parsedTimestamp);
+    }
+
+    // Safari/locale-specific fallbacks can return unparseable strings.
+    const usPattern = /^(\d{1,2})\/(\d{1,2})\/(\d{4}),?\s+(\d{1,2}):(\d{2})(?::(\d{2}))?/;
+    const usMatch = raw.match(usPattern);
+    if (usMatch) {
+      const month = Number(usMatch[1]) - 1;
+      const day = Number(usMatch[2]);
+      const year = Number(usMatch[3]);
+      const hour = Number(usMatch[4]);
+      const minute = Number(usMatch[5]);
+      const second = usMatch[6] ? Number(usMatch[6]) : 0;
+      const date = new Date(year, month, day, hour, minute, second);
+      return Number.isNaN(date.getTime()) ? null : date;
+    }
+
+    return null;
+  }
+
   const currentYearElement = document.getElementById('current-year');
   if (currentYearElement) {
     currentYearElement.textContent = String(new Date().getFullYear());
@@ -105,18 +133,16 @@ function updateFreshnessCues() {
 
   const lastUpdatedElement = document.getElementById('last-updated');
   if (lastUpdatedElement) {
-    const lastModified = new Date(document.lastModified);
-    if (!Number.isNaN(lastModified.getTime())) {
-      const formatted = new Intl.DateTimeFormat(undefined, {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit'
-      }).format(lastModified);
-      lastUpdatedElement.textContent = formatted;
-      lastUpdatedElement.setAttribute('datetime', lastModified.toISOString());
-    }
+    const lastModified = getDocumentLastModifiedDate() || new Date();
+    const formatted = new Intl.DateTimeFormat(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit'
+    }).format(lastModified);
+    lastUpdatedElement.textContent = formatted;
+    lastUpdatedElement.setAttribute('datetime', lastModified.toISOString());
   }
 }
 
