@@ -15,10 +15,28 @@
       ? self
       : this,
   function () {
+    function toFiniteYear(value) {
+      if (value === null || value === undefined || value === '') {
+        return null;
+      }
+      const year = Number(value);
+      return Number.isFinite(year) ? year : null;
+    }
+
     function getSortYear(pub) {
-      const rawYear = (pub.issued && pub.issued['date-parts'] && pub.issued['date-parts'][0] && pub.issued['date-parts'][0][0]) ?? pub.year;
-      const numericYear = Number(rawYear);
-      return Number.isFinite(numericYear) ? numericYear : Number.NEGATIVE_INFINITY;
+      const issuedYear = toFiniteYear(
+        pub.issued &&
+          pub.issued['date-parts'] &&
+          pub.issued['date-parts'][0] &&
+          pub.issued['date-parts'][0][0]
+      );
+
+      if (issuedYear !== null) {
+        return issuedYear;
+      }
+
+      const fallbackYear = toFiniteYear(pub.year);
+      return fallbackYear !== null ? fallbackYear : Number.NEGATIVE_INFINITY;
     }
 
     function sortPublications(publications) {
