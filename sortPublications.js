@@ -5,7 +5,7 @@ function sortPublications(publications) {
     return Number.isFinite(numericYear) ? numericYear : Number.NEGATIVE_INFINITY;
   };
 
-  const sorted = publications
+  return publications
     .map((pub, index) => ({ pub, index, sortYear: getSortYear(pub) }))
     .sort((a, b) => {
       if (b.sortYear !== a.sortYear) {
@@ -14,9 +14,6 @@ function sortPublications(publications) {
       return a.index - b.index;
     })
     .map((entry) => entry.pub);
-
-  publications.splice(0, publications.length, ...sorted);
-  return publications;
 }
 
 module.exports = { sortPublications };
