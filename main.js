@@ -137,9 +137,7 @@ function updateFreshnessCues() {
     const formatted = new Intl.DateTimeFormat(undefined, {
       year: 'numeric',
       month: 'short',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit'
+      day: 'numeric'
     }).format(lastModified);
     lastUpdatedElement.textContent = formatted;
     lastUpdatedElement.setAttribute('datetime', lastModified.toISOString());
