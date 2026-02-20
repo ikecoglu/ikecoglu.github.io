@@ -1,43 +1,44 @@
-# Testing Setup
+# Project Notes
 
-This project uses [Jest](https://jestjs.io/) for basic unit tests. To run the tests:
-Node.js 18.x is recommended. An `.nvmrc` file is provided for use with `nvm`.
+This repository is a static personal website (`index.html`) with publication data in `publications.json`.
 
-1. Install dependencies once:
+## Testing
 
-   ```bash
-   npm install
-   ```
+Tests are written with [Jest](https://jestjs.io/) and currently cover `sortPublications.js` behavior:
+- newest-to-oldest ordering
+- non-mutating sort behavior
+- missing/invalid date handling
+- mixed `issued.date-parts` and `year` formats
 
-2. Run the test suite:
+Node.js 18.x is recommended (see `.nvmrc`).
 
-   ```bash
-   npm test
-   ```
+```bash
+# if you use nvm
+nvm use
 
-The test suite currently validates that the publication sorting logic orders entries from newest to oldest.
+# install from lockfile (same behavior as CI)
+npm ci
 
-### CI lockfile checklist (GitHub Actions)
+# run tests
+npm test
+```
 
-This repo's CI uses `npm ci`, which requires a committed `package-lock.json`.
+## CI (GitHub Actions)
 
-1. Generate/update the lockfile locally:
+Workflow file: `.github/workflows/test.yml`
 
-   ```bash
-   npm install
-   ```
+On push/PR to `main`, CI runs:
+1. `npm ci`
+2. `npm test`
 
-2. Confirm `package-lock.json` exists and is updated.
-3. Commit both `package-lock.json` and any `package.json` changes in the same commit.
-4. Push again so GitHub Actions can run `npm ci` deterministically.
+`npm ci` requires a committed `package-lock.json`. If `package-lock.json` is missing or stale relative to `package.json`, CI fails before tests run.
 
-If the lockfile is missing, CI fails before tests run.
-## Viewing the Website Locally
+## Viewing Locally
 
-`index.html` fetches `publications.json`, so it must be served over HTTP. Start a small web server and open the page from `http://localhost:8080`:
+`index.html` fetches `publications.json`, so open it through an HTTP server (not `file://`):
 
 ```bash
 npx http-server
 # or
-python3 -m http.server
+python3 -m http.server 8080
 ```
