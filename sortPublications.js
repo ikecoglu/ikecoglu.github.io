@@ -1,9 +1,22 @@
 function sortPublications(publications) {
-  return publications.sort((a, b) => {
-    const yearA = (a.issued && a.issued['date-parts'] && a.issued['date-parts'][0] && a.issued['date-parts'][0][0]) || a.year;
-    const yearB = (b.issued && b.issued['date-parts'] && b.issued['date-parts'][0] && b.issued['date-parts'][0][0]) || b.year;
-    return yearB - yearA;
-  });
+  const getSortYear = (pub) => {
+    const rawYear = (pub.issued && pub.issued['date-parts'] && pub.issued['date-parts'][0] && pub.issued['date-parts'][0][0]) ?? pub.year;
+    const numericYear = Number(rawYear);
+    return Number.isFinite(numericYear) ? numericYear : Number.NEGATIVE_INFINITY;
+  };
+
+  const sorted = publications
+    .map((pub, index) => ({ pub, index, sortYear: getSortYear(pub) }))
+    .sort((a, b) => {
+      if (b.sortYear !== a.sortYear) {
+        return b.sortYear - a.sortYear;
+      }
+      return a.index - b.index;
+    })
+    .map((entry) => entry.pub);
+
+  publications.splice(0, publications.length, ...sorted);
+  return publications;
 }
 
 module.exports = { sortPublications };

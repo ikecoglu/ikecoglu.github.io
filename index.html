@@ -285,15 +285,24 @@
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const publications = await response.json();
+        let publications = await response.json();
         
-        // Sort entries by year (newest first)
-        publications.sort((a, b) => {
-          // Handle both year formats
-          const yearA = a.issued?.['date-parts']?.[0]?.[0] || a.year;
-          const yearB = b.issued?.['date-parts']?.[0]?.[0] || b.year;
-          return yearB - yearA;
-        });
+        // Sort entries by year (newest first) in a deterministic, stable way.
+        const getSortYear = (pub) => {
+          const rawYear = pub.issued?.['date-parts']?.[0]?.[0] ?? pub.year;
+          const numericYear = Number(rawYear);
+          return Number.isFinite(numericYear) ? numericYear : Number.NEGATIVE_INFINITY;
+        };
+
+        publications = publications
+          .map((pub, index) => ({ pub, index, sortYear: getSortYear(pub) }))
+          .sort((a, b) => {
+            if (b.sortYear !== a.sortYear) {
+              return b.sortYear - a.sortYear;
+            }
+            return a.index - b.index;
+          })
+          .map((entry) => entry.pub);
 
         const publicationsList = document.getElementById('publications-list');
         if (!publications || publications.length === 0) {
