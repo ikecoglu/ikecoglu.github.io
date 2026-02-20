@@ -1,0 +1,140 @@
+/* Professional styling */
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  padding-top: 76px;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.about-content {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cv-download {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cv-download:hover {
+  background-color: #34495e;
+  color: white;
+  text-decoration: none;
+}
+
+.publications-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.publication-item {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publication-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.authors {
+  font-size: 0.95rem;
+}
+
+.venue {
+  font-size: 0.9rem;
+}
+
+/* Banner styles */
+.banner {
+  background-image: url('banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make both texts use the same color */
+.banner h1,
+.banner .lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* About image styles */
+#about img {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

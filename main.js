@@ -97,4 +97,30 @@ async function loadPublications() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadPublications);
+function updateFreshnessCues() {
+  const currentYearElement = document.getElementById('current-year');
+  if (currentYearElement) {
+    currentYearElement.textContent = String(new Date().getFullYear());
+  }
+
+  const lastUpdatedElement = document.getElementById('last-updated');
+  if (lastUpdatedElement) {
+    const lastModified = new Date(document.lastModified);
+    if (!Number.isNaN(lastModified.getTime())) {
+      const formatted = new Intl.DateTimeFormat(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit'
+      }).format(lastModified);
+      lastUpdatedElement.textContent = formatted;
+      lastUpdatedElement.setAttribute('datetime', lastModified.toISOString());
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateFreshnessCues();
+  loadPublications();
+});
