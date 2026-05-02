@@ -19,7 +19,7 @@ async function loadPublications() {
     if (!doi) {
       return null;
     }
-    return `https://doi.org/${encodeURIComponent(doi)}`;
+    return `https://doi.org/${doi}`;
   }
 
   function renderPublication(pub) {

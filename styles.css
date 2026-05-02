@@ -1,6 +1,6 @@
 /* Professional styling */
 body {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.8;
   color: #333;
   padding-top: 76px;
