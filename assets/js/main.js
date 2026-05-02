@@ -138,7 +138,7 @@ async function loadPublications() {
   }
 
   try {
-    const response = await fetch('publications.json');
+    const response = await fetch('data/publications.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

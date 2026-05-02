@@ -1,4 +1,4 @@
-const { sortPublications } = require('../sortPublications');
+const { sortPublications } = require('../assets/js/sortPublications');
 
 describe('sortPublications', () => {
   test('orders publications from newest to oldest', () => {
