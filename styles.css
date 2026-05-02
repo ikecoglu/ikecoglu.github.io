@@ -1,19 +1,56 @@
-/* Professional styling */
+/* Design tokens */
+:root {
+  --ik-text: #333333;
+  --ik-heading: #2c3e50;
+  --ik-accent: #2c3e50;
+  --ik-accent-hover: #34495e;
+  --ik-border: #eeeeee;
+  --ik-shadow: rgba(0, 0, 0, 0.1);
+  --ik-portrait-border: white;
+  --ik-footer-bg: #2c3e50;
+}
+
+[data-bs-theme="dark"] {
+  --ik-text: #c9d1d9;
+  --ik-heading: #8ab4d4;
+  --ik-accent: #3d7ab5;
+  --ik-accent-hover: #4d8ac5;
+  --ik-border: #30363d;
+  --ik-shadow: rgba(0, 0, 0, 0.4);
+  --ik-portrait-border: #30363d;
+  --ik-footer-bg: #0d1117;
+}
+
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.8;
-  color: #333;
+  color: var(--ik-text);
   padding-top: 76px;
 }
 
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--ik-shadow);
   padding: 1rem;
+  background-color: var(--bs-body-bg) !important;
 }
 
 .navbar-brand {
   font-weight: 600;
   font-size: 1.4rem;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--ik-accent) !important;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  line-height: 1;
 }
 
 section {
@@ -24,7 +61,7 @@ h1,
 h2 {
   margin-bottom: 1.5rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--ik-heading);
 }
 
 .about-content {
@@ -36,7 +73,7 @@ h2 {
 .cv-download {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #2c3e50;
+  background-color: var(--ik-accent);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -44,7 +81,7 @@ h2 {
 }
 
 .cv-download:hover {
-  background-color: #34495e;
+  background-color: var(--ik-accent-hover);
   color: white;
   text-decoration: none;
 }
@@ -52,17 +89,17 @@ h2 {
 .publications-list li {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--ik-border);
 }
 
 .contact-info {
-  background-color: #f8f9fa;
+  background-color: var(--bs-tertiary-bg);
   padding: 2rem;
   border-radius: 8px;
 }
 
 footer {
-  background-color: #2c3e50;
+  background-color: var(--ik-footer-bg);
   color: white;
   padding: 30px 0;
   margin-top: 40px;
@@ -70,18 +107,18 @@ footer {
 
 .publication-item {
   padding: 1.5rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--ik-border);
   border-radius: 8px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .publication-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--ik-shadow);
 }
 
 .publication-title {
-  color: #2c3e50;
+  color: var(--ik-heading);
   margin-bottom: 0.5rem;
 }
 
@@ -93,7 +130,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Banner styles */
+/* Banner */
 .banner {
   background-image: url('banner.png');
   background-size: cover;
@@ -124,17 +161,28 @@ footer {
   z-index: 1;
 }
 
-/* Make both texts use the same color */
 .banner h1,
 .banner .lead {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* About image styles */
+/* About image */
 #about img {
   max-width: 300px;
   margin: 0 auto;
   display: block;
-  border: 5px solid white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--ik-portrait-border);
+  box-shadow: 0 4px 8px var(--ik-shadow);
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
 }

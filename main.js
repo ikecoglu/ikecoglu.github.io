@@ -1,3 +1,69 @@
+// Apply stored theme before paint to avoid flash
+(function () {
+  const stored = localStorage.getItem('theme');
+  if (stored) document.documentElement.setAttribute('data-bs-theme', stored);
+})();
+
+let fadeInObserver;
+
+function initScrollAnimations() {
+  fadeInObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeInObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
+  document.querySelectorAll('.fade-in').forEach((el) => fadeInObserver.observe(el));
+}
+
+function observeNewFadeIns(container) {
+  if (!fadeInObserver) return;
+  container.querySelectorAll('.fade-in').forEach((el) => fadeInObserver.observe(el));
+}
+
+function initActiveNav() {
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+  function update() {
+    let current = '';
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= 100) current = section.id;
+    });
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+function initDarkMode() {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-bs-theme', theme);
+    const icon = toggle.querySelector('.theme-icon');
+    icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  toggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+
+  applyTheme(localStorage.getItem('theme') || 'light');
+}
+
 async function loadPublications() {
   const publicationsList = document.getElementById('publications-list');
 
@@ -24,7 +90,7 @@ async function loadPublications() {
 
   function renderPublication(pub) {
     const item = document.createElement('div');
-    item.className = 'publication-item mb-4 p-4';
+    item.className = 'publication-item mb-4 p-4 fade-in';
 
     const title = document.createElement('h5');
     title.className = 'publication-title';
@@ -91,6 +157,7 @@ async function loadPublications() {
       fragment.appendChild(renderPublication(pub));
     });
     publicationsList.appendChild(fragment);
+    observeNewFadeIns(publicationsList);
   } catch (error) {
     console.error('Error loading publications:', error);
     setStatusMessage(`Error loading publications: ${error.message}`, 'text-danger');
@@ -145,6 +212,9 @@ function updateFreshnessCues() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initDarkMode();
+  initScrollAnimations();
+  initActiveNav();
   updateFreshnessCues();
   loadPublications();
 });

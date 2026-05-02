@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,6 +77,9 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
+        <button id="theme-toggle" title="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -87,7 +90,7 @@
     <!-- About Section -->
     <section id="about">
       <div class="row justify-content-center align-items-center">
-        <div class="col-md-4 mb-4 mb-md-0">
+        <div class="col-md-4 mb-4 mb-md-0 fade-in">
           <picture>
             <source
               type="image/avif"
@@ -110,7 +113,7 @@
               class="img-fluid rounded-circle shadow">
           </picture>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 fade-in">
           <h2 class="mb-4">About Me</h2>
           <div class="about-content">
             <p class="lead">Welcome! I am a Ph.D. student in Biomedical Physics at Stanford University, exploring the intersection of physics, mathematics, and biomedicine. My work spans theoretical modeling, experimental research, and machine learning applications. I am passionate about uncovering new insights that transform our understanding of biological systems and developing technologies that improve human health.</p>
@@ -121,7 +124,7 @@
     
     <!-- CV Section -->
     <section id="cv" class="bg-light">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center fade-in">
         <div class="col-md-10 text-center">
           <h2>Curriculum Vitae</h2>
           <p class="mb-4">My academic and research experience in biomedical physics and related fields.</p>
@@ -137,7 +140,7 @@
     
     <!-- Publications Section -->
     <section id="publications">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center fade-in">
         <div class="col-md-10">
           <h2 class="text-center mb-4">Publications</h2>
           <div id="publications-list" class="publications-list">
@@ -149,7 +152,7 @@
     
     <!-- Contact Section -->
     <section id="contact" class="bg-light">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center fade-in">
         <div class="col-md-10">
           <h2 class="text-center mb-4">Contact</h2>
           <div class="contact-info text-center">
