@@ -31,7 +31,6 @@ body {
 .navbar {
   box-shadow: 0 2px 4px var(--ik-shadow);
   padding: 1rem;
-  background-color: var(--bs-body-bg) !important;
 }
 
 .navbar-brand {
@@ -45,12 +44,22 @@ body {
 }
 
 #theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.1rem;
-  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--bs-border-color);
+  background: transparent;
   cursor: pointer;
-  line-height: 1;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--bs-border-color);
 }
 
 section {
