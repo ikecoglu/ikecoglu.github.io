@@ -1,25 +1,35 @@
 # Project Notes
 
-This repository is a static personal website (`index.html`) with publication data in `publications.json`.
+This repository hosts a static personal website built around two core files:
+- `index.html` (site markup and client-side rendering)
+- `publications.json` (publication metadata consumed by the page)
 
-## Testing
+## Prerequisites
 
-Tests are written with [Jest](https://jestjs.io/) and currently cover `sortPublications.js` behavior:
-- newest-to-oldest ordering
-- non-mutating sort behavior
-- missing/invalid date handling
-- mixed `issued.date-parts` and `year` formats
+- Node.js 18.x (recommended via `.nvmrc`)
+- npm
 
-Node.js 18.x is recommended (see `.nvmrc`).
+## Setup
 
 ```bash
 # if you use nvm
 nvm use
 
-# install from lockfile (same behavior as CI)
+# install dependencies from lockfile (same behavior as CI)
 npm ci
+```
 
-# run tests
+## Testing
+
+Tests are written with [Jest](https://jestjs.io/) and currently validate `sortPublications.js` behavior for:
+- newest-to-oldest ordering
+- non-mutating sort behavior
+- missing/invalid date handling
+- mixed `issued.date-parts` and `year` formats
+
+Run tests with:
+
+```bash
 npm test
 ```
 
@@ -31,14 +41,16 @@ On push/PR to `main`, CI runs:
 1. `npm ci`
 2. `npm test`
 
-`npm ci` requires a committed `package-lock.json`. If `package-lock.json` is missing or stale relative to `package.json`, CI fails before tests run.
+> `npm ci` requires a committed `package-lock.json`. If `package-lock.json` is missing or stale relative to `package.json`, CI fails before tests run.
 
 ## Viewing Locally
 
-`index.html` fetches `publications.json`, so open it through an HTTP server (not `file://`):
+Because `index.html` fetches `publications.json`, serve the repository over HTTP (not `file://`):
 
 ```bash
 npx http-server
 # or
 python3 -m http.server 8080
 ```
+
+Then open the printed local URL in your browser.
