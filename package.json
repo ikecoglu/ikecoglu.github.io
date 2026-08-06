@@ -1,0 +1,11 @@
+{
+  "name": "ikecoglu-website-tests",
+  "version": "1.0.0",
+  "description": "Test suite for the website",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
